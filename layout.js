@@ -1,11 +1,13 @@
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { View, StyleSheet, Text } from "react-native";
+import { View, StyleSheet, Text, Dimensions } from "react-native";
 
 const layout = () => (
   <SafeAreaView style={Style.SafeAreaViewStyles}>
     <View style={Style.ViewGreen}>
-      <Text style={Style.textHeader}>Alemarnery</Text>
+      <Text style={Style.textHeader}>
+        Alemarnery, ancho {Dimensions.get("window").width}
+      </Text>
       <Text style={Style.textHeader}>Villalobos</Text>
     </View>
     <View style={Style.ViewBlue}>
@@ -16,15 +18,15 @@ const layout = () => (
       <View style={Style.ViewRedChild} />
     </View>
     <View style={Style.parentViewT}>
-      <View style={[Style.child, { marginRight: 4 }]} />
+      <View style={[Style.child, { marginRight: 32 }]} />
       <View style={Style.child} />
     </View>
     <View style={Style.parentViewF}>
-      <View style={[Style.child, { marginRight: 4 }]} />
+      <View style={[Style.child, { marginRight: 32 }]} />
       <View style={Style.child} />
     </View>
     <View style={Style.View} />
-    <View style={Style.View} />
+    <View style={Style.ViewGreen} />
   </SafeAreaView>
 );
 
@@ -93,10 +95,10 @@ const Style = StyleSheet.create({
     alignItems: "center",
   },
   child: {
-    borderWidth: 3,
+    borderWidth: 2,
     borderColor: "red",
     height: 60,
-    width: 120,
+    width: 152,
   },
 });
 
