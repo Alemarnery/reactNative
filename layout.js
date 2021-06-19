@@ -18,14 +18,39 @@ const layout = () => (
       <View style={Style.ViewRedChild} />
     </View>
     <View style={Style.parentViewT}>
-      <View style={[Style.child, { marginRight: 32 }]} />
+      <View style={[Style.child, { marginRight: space }]} />
       <View style={Style.child} />
     </View>
     <View style={Style.parentViewF}>
-      <View style={[Style.child, { marginRight: 32 }]} />
+      <View style={[Style.child, { marginRight: space }]} />
       <View style={Style.child} />
     </View>
-    <View style={Style.View} />
+    <View style={Style.parentViewFi}>
+      <View style={{ flexDirection: "row" }}>
+        <View style={Style.childViewFi} />
+        <View style={Style.childViewFi} />
+        <View style={Style.childViewFi} />
+        <View style={Style.childViewFi} />
+      </View>
+      <View style={{ flexDirection: "row" }}>
+        <View style={Style.childViewFi} />
+        <View style={Style.childViewFi} />
+        <View style={Style.childViewFi} />
+        <View style={Style.childViewFi} />
+      </View>
+      <View style={{ flexDirection: "row" }}>
+        <View style={Style.childViewFi} />
+        <View style={Style.childViewFi} />
+        <View style={Style.childViewFi} />
+        <View style={Style.childViewFi} />
+      </View>
+      <View style={{ flexDirection: "row" }}>
+        <View style={Style.childViewFi} />
+        <View style={Style.childViewFi} />
+        <View style={Style.childViewFi} />
+        <View style={Style.childViewFi} />
+      </View>
+    </View>
     <View style={Style.ViewGreen} />
   </SafeAreaView>
 );
@@ -33,6 +58,10 @@ const layout = () => (
 //Justify Content y align items, se utilizan cuando los elementos tienen un HEIGHT determinado
 
 //JuSTIFY Content trabaja en fucion del eje princial, es decir, el vertical
+
+const height = 60;
+const width = 60;
+const space = (Dimensions.get("window").width - width * 5) / 4;
 
 const Style = StyleSheet.create({
   SafeAreaViewStyles: {
@@ -43,62 +72,67 @@ const Style = StyleSheet.create({
     // justifyContent: "flex-end",
     //alignItems: "center",
   },
-  View: {
-    borderWidth: 3,
-    borderColor: "blue",
-    flex: 1 / 6,
-  },
+
   textHeader: {
     fontSize: 30,
     textAlign: "center",
     fontWeight: "bold",
   },
   ViewGreen: {
-    borderWidth: 3,
+    borderWidth: 1,
     borderColor: "green",
     flex: 1 / 6,
     justifyContent: "center",
   },
   ViewBlue: {
-    borderWidth: 3,
+    borderWidth: 1,
     borderColor: "blue",
     flex: 1 / 6,
-    justifyContent: "space-between",
     flexDirection: "row",
     alignItems: "center",
-  },
-  ViewYellow: {
-    borderWidth: 3,
-    borderColor: "yellow",
-    flex: 1 / 6,
+    justifyContent: "space-between",
   },
   ViewRedChild: {
     borderWidth: 2,
     borderColor: "red",
-    height: 60,
-    width: 60,
+    height,
+    width,
   },
   parentViewT: {
-    borderWidth: 3,
+    borderWidth: 1,
     borderColor: "black",
     flex: 1 / 6,
     flexDirection: "row",
-    justifyContent: "flex-start",
     alignItems: "center",
+    justifyContent: "flex-start",
   },
   parentViewF: {
-    borderWidth: 3,
+    borderWidth: 1,
     borderColor: "black",
     flex: 1 / 6,
     flexDirection: "row",
-    justifyContent: "flex-end",
     alignItems: "center",
+    justifyContent: "flex-end",
   },
   child: {
     borderWidth: 2,
     borderColor: "red",
-    height: 60,
-    width: 152,
+    height,
+    width: width * 2 + space,
+  },
+  parentViewFi: {
+    borderWidth: 1,
+    borderColor: "black",
+    flex: 1 / 6,
+    justifyContent: "flex-start",
+  },
+  childViewFi: {
+    borderWidth: 1,
+    borderColor: "red",
+    height: height / 4,
+    width: (width * 2) / 4,
+    marginTop: space / 3,
+    marginRight: space / 3,
   },
 });
 
