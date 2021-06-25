@@ -7,19 +7,19 @@ import Layout from "./layout";
 import Input from "./exercise/Input";
 
 export default function App() {
-  //Second Exercise
-  return (
-    <SafeAreaProvider>
-      <Input />
-    </SafeAreaProvider>
-  );
-
-  // // First Exercise
+  // //Second Exercise
   // return (
   //   <SafeAreaProvider>
-  //     <Layout />
+  //     <Input />
   //   </SafeAreaProvider>
   // );
+
+  // First Exercise
+  return (
+    <SafeAreaProvider>
+      <Layout />
+    </SafeAreaProvider>
+  );
 
   return (
     <View

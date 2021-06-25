@@ -1,6 +1,7 @@
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { View, StyleSheet, Text, Dimensions } from "react-native";
+import Input from "./Components/Input";
 
 const layout = () => (
   <SafeAreaView style={Style.SafeAreaViewStyles}>
@@ -51,7 +52,18 @@ const layout = () => (
         <View style={Style.childViewFi} />
       </View>
     </View>
-    <View style={Style.ViewGreen} />
+    <View style={Style.ViewGreen}>
+      <Input
+        placeholder="Ingrese Nombre"
+        iconName="email"
+        iconLib="MaterialIcon"
+      />
+      <Input
+        placeholder="Ingrese el apellido"
+        iconName="5g"
+        iconLib="MaterialIcon"
+      />
+    </View>
   </SafeAreaView>
 );
 
