@@ -14,12 +14,12 @@ export default function App() {
     </SafeAreaProvider>
   );
 
-  // First Exercise
-  return (
-    <SafeAreaProvider>
-      <Layout />
-    </SafeAreaProvider>
-  );
+  // // First Exercise
+  // return (
+  //   <SafeAreaProvider>
+  //     <Layout />
+  //   </SafeAreaProvider>
+  // );
 
   return (
     <View
