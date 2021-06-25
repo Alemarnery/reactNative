@@ -1,18 +1,25 @@
 import React from "react";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { Text, View, StyleSheet, Platform } from "react-native";
-
-import Layout from "./layout";
 import { otherStyle } from "./AppStyles";
 
+import Layout from "./layout";
+import Input from "./exercise/Input";
+
 export default function App() {
-  if (true) {
-    return (
-      <SafeAreaProvider>
-        <Layout />
-      </SafeAreaProvider>
-    );
-  }
+  //Second Exercise
+  return (
+    <SafeAreaProvider>
+      <Input />
+    </SafeAreaProvider>
+  );
+
+  // First Exercise
+  return (
+    <SafeAreaProvider>
+      <Layout />
+    </SafeAreaProvider>
+  );
 
   return (
     <View
