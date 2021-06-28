@@ -1,20 +1,18 @@
 import React from "react";
 import { View, TextInput, StyleSheet } from "react-native";
-import { MaterialIcons } from "@expo/vector-icons";
+import { getIconLib } from "../../Utilities";
 
 const Input = ({ placeholder, iconName, iconLib }) => {
+  const Icon = getIconLib(iconLib);
+
   return (
     <View style={Style.viewInput}>
       <TextInput style={Style.input} placeholder={placeholder} />
-      <MaterialIcons
-        name={iconName}
-        size={35}
-        color="gray"
-        style={Style.icon}
-      />
+      <Icon name={iconName} size={35} color="gray" style={Style.icon} />
     </View>
   );
 };
+
 const Style = StyleSheet.create({
   viewInput: {
     borderColor: "black",

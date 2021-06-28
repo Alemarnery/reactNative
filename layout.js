@@ -79,8 +79,6 @@ const layout = () => (
   </SafeAreaView>
 );
 
-//Justify Content y align items, se utilizan cuando los elementos tienen un HEIGHT determinado
-//JuSTIFY Content trabaja en fucion del eje princial, es decir, el vertical
 const height = 60;
 const width = 60;
 const space = (Dimensions.get("window").width - width * 5) / 4;
@@ -90,9 +88,6 @@ const Style = StyleSheet.create({
     borderWidth: 1,
     borderColor: "red",
     flex: 1,
-    // flexDirection: "row",
-    // justifyContent: "flex-end",
-    //alignItems: "center",
   },
 
   textHeader: {
