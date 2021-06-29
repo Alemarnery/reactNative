@@ -4,32 +4,40 @@ import {
   StyleSheet,
   Text,
   Image,
-  SafeAreaView,
   ScrollView,
+  Dimensions,
 } from "react-native";
 
 const ComponentImage = () => {
   return (
-    <ScrollView style={Style.scrollView} numColumns={2}>
+    <ScrollView style={Style.scrollView}>
       <View style={Style.ContainerView}>
-        <Image
-          source={{ uri: "https://reactjs.org/logo-og.png" }}
-          style={{
-            margin: 3,
-            borderColor: "darkorange",
-            borderWidth: 3,
-            height: 100,
-          }}
-        />
-        <Text style={Style.text}>Title</Text>
+        <View>
+          <Image
+            source={{ uri: "https://reactjs.org/logo-og.png" }}
+            style={{
+              margin: 3,
+              borderColor: "blue",
+              borderWidth: 3,
+              height: 100,
+            }}
+          />
+        </View>
+        <View style={{ borderWidth: 1, borderColor: "green", margin: 3 }}>
+          <Text style={Style.text}>Title</Text>
+        </View>
+        <View style={{ borderWidth: 1, borderColor: "red", margin: 3 }}>
+          <Text style={Style.text}>Title</Text>
+        </View>
       </View>
     </ScrollView>
   );
 };
 
+const width = Dimensions.get("window").width;
+
 const Style = StyleSheet.create({
   scrollView: {
-    backgroundColor: "pink",
     margin: 10,
     flex: 1,
   },
@@ -37,9 +45,11 @@ const Style = StyleSheet.create({
     fontSize: 20,
   },
   ContainerView: {
-    borderColor: "red",
+    borderColor: "purple",
     borderWidth: 5,
     margin: 5,
+    padding: 5,
+    width: width / 3,
   },
 });
 
