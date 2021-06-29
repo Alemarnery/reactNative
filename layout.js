@@ -1,13 +1,50 @@
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { View, ScrollView, StyleSheet, Text, Dimensions } from "react-native";
+import {
+  View,
+  ScrollView,
+  StyleSheet,
+  Text,
+  Dimensions,
+  FlatList,
+} from "react-native";
 import Input from "./Components/Input";
 import ComponentImage from "./Components/Image";
 
 const layout = () => {
+  const DATA = [
+    {
+      id: 1,
+      imageURL: "https://random.imagecdn.app/500/200",
+      title: "Primer Titulo",
+      secondTitle: "Segundo Titulo",
+    },
+    {
+      id: 2,
+      imageURL: "https://random.imagecdn.app/400/100",
+      title: "Titulo de la segunda tarjeta",
+      secondTitle: "Subtitulo de la segunda tarjeta",
+    },
+    {
+      id: 3,
+      imageURL: "https://random.imagecdn.app/400/250",
+      title: "Tercer Titulo",
+      secondTitle: "Subtitulo de la terca tarjeta",
+    },
+  ];
+
+  const renderImageComponent = ({ item }) => {
+    <ComponentImage
+      imageURL={item.imageURL}
+      title={item.title}
+      secondTitle={item.secondTitle}
+    />;
+  };
+
+  //Tile Component
   return (
     <SafeAreaView style={Style.SafeAreaViewStyles}>
-      <ScrollView style={{ flex: 1 }}>
+      {/* <ScrollView style={{ flex: 1 / 2 }}>
         <ComponentImage
           imageURL="https://random.imagecdn.app/500/200"
           title="Primer Titulo"
@@ -23,7 +60,12 @@ const layout = () => {
           title="Tercer Titulo"
           secondTitle="Subtitulo de la terca tarjeta"
         />
-      </ScrollView>
+      </ScrollView> */}
+      <FlatList
+        data={DATA}
+        keyExtractor={(item) => item.id}
+        renderItem={renderImageComponent}
+      />
     </SafeAreaView>
   );
 

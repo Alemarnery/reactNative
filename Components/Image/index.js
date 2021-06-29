@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  View,
-  StyleSheet,
-  Text,
-  Image,
-  ScrollView,
-  Dimensions,
-} from "react-native";
+import { View, StyleSheet, Text, Image } from "react-native";
 
 const ComponentImage = ({ imageURL, title, secondTitle }) => {
   return (
@@ -21,7 +14,6 @@ const ComponentImage = ({ imageURL, title, secondTitle }) => {
           borderWidth: 3,
           height: 100,
         }}
-        s
       />
 
       <View style={{ flexDirection: "row" }}>
