@@ -2,12 +2,12 @@ import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { View, ScrollView, StyleSheet, Text, Dimensions } from "react-native";
 import Input from "./Components/Input";
-import Image from "./Components/Image";
+import ComponentImage from "./Components/Image";
 
 const layout = () => {
   return (
-    <SafeAreaView>
-      <Image />
+    <SafeAreaView style={Style.SafeAreaViewStyles}>
+      <ComponentImage />
     </SafeAreaView>
   );
 
