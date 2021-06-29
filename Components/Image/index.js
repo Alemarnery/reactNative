@@ -8,39 +8,39 @@ import {
   Dimensions,
 } from "react-native";
 
-const ComponentImage = () => {
+const ComponentImage = ({ imageURL, title, secondTitle }) => {
   return (
-    <ScrollView style={Style.scrollView}>
-      <View style={Style.ContainerView}>
-        <View>
-          <Image
-            source={{ uri: "https://reactjs.org/logo-og.png" }}
-            style={{
-              margin: 3,
-              borderColor: "blue",
-              borderWidth: 3,
-              height: 100,
-            }}
-          />
-        </View>
-        <View style={{ borderWidth: 1, borderColor: "green", margin: 3 }}>
-          <Text style={Style.text}>Title</Text>
-        </View>
-        <View style={{ borderWidth: 1, borderColor: "red", margin: 3 }}>
-          <Text style={Style.text}>Title</Text>
-        </View>
+    <View style={Style.ContainerView}>
+      <Image
+        source={{
+          uri: imageURL,
+        }}
+        style={{
+          margin: 3,
+          borderColor: "blue",
+          borderWidth: 3,
+          height: 100,
+        }}
+        s
+      />
+
+      <View style={{ flexDirection: "row" }}>
+        <View style={Style.circle} />
+        <View style={Style.circle} />
+        <View style={Style.circle} />
       </View>
-    </ScrollView>
+
+      <View style={{ borderWidth: 1, borderColor: "green", margin: 3 }}>
+        <Text style={Style.text}>{title}</Text>
+      </View>
+      <View style={{ borderWidth: 1, borderColor: "red", margin: 3 }}>
+        <Text style={Style.text}>{secondTitle} </Text>
+      </View>
+    </View>
   );
 };
 
-const width = Dimensions.get("window").width;
-
 const Style = StyleSheet.create({
-  scrollView: {
-    margin: 10,
-    flex: 1,
-  },
   text: {
     fontSize: 20,
   },
@@ -49,7 +49,14 @@ const Style = StyleSheet.create({
     borderWidth: 5,
     margin: 5,
     padding: 5,
-    width: width / 3,
+  },
+  circle: {
+    width: 30,
+    margin: 3,
+    height: 30,
+    borderWidth: 2,
+    borderRadius: 15,
+    borderColor: "black",
   },
 });
 

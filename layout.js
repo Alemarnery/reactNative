@@ -7,7 +7,23 @@ import ComponentImage from "./Components/Image";
 const layout = () => {
   return (
     <SafeAreaView style={Style.SafeAreaViewStyles}>
-      <ComponentImage />
+      <ScrollView style={{ flex: 1 }}>
+        <ComponentImage
+          imageURL="https://random.imagecdn.app/500/200"
+          title="Primer Titulo"
+          secondTitle="Segundo Titulo"
+        />
+        <ComponentImage
+          imageURL="https://random.imagecdn.app/400/100"
+          title="Titulo de la segunda tarjeta"
+          secondTitle="Subtitulo de la segunda tarjeta"
+        />
+        <ComponentImage
+          imageURL="https://random.imagecdn.app/400/250"
+          title="Tercer Titulo"
+          secondTitle="Subtitulo de la terca tarjeta"
+        />
+      </ScrollView>
     </SafeAreaView>
   );
 
