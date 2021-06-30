@@ -25,6 +25,7 @@ const ComponentImage = ({ imageURL, title, secondTitle }) => {
       <View style={{ borderWidth: 1, borderColor: "green", margin: 3 }}>
         <Text style={Style.text}>{title}</Text>
       </View>
+
       <View style={{ borderWidth: 1, borderColor: "red", margin: 3 }}>
         <Text style={Style.text}>{secondTitle} </Text>
       </View>

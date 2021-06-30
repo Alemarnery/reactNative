@@ -6,14 +6,14 @@ import ComponentImage from "./Components/Image";
 import First from "./Exercise/First";
 
 const layout = () => {
-  //First exercise, was a rectanguler
-  return (
-    <SafeAreaView style={Style.SafeAreaViewStyles}>
-      <First />
-    </SafeAreaView>
-  );
+  //***Square exercise
+  // return (
+  //   <SafeAreaView style={Style.SafeAreaViewStyles}>
+  //     <First />
+  //   </SafeAreaView>
+  // );
 
-  //**********Tile Component
+  //*******Tile Component
   const DATA = [
     {
       id: 1,
@@ -23,7 +23,7 @@ const layout = () => {
     },
     {
       id: 2,
-      imageURL: "https://random.imagecdn.app/400/100",
+      imageURL: "https://random.imagecdn.app/500/100",
       title: "Titulo de la segunda tarjeta",
       secondTitle: "Subtitulo de la segunda tarjeta",
     },
@@ -36,36 +36,22 @@ const layout = () => {
   ];
 
   const renderImageComponent = ({ item }) => {
-    <ComponentImage
-      imageURL={item.imageURL}
-      title={item.title}
-      secondTitle={item.secondTitle}
-    />;
+    return (
+      <ComponentImage
+        imageURL={item.imageURL}
+        title={item.title}
+        secondTitle={item.secondTitle}
+      />
+    );
   };
 
   return (
     <SafeAreaView style={Style.SafeAreaViewStyles}>
-      {/* <ScrollView style={{ flex: 1 / 2 }}>
-        <ComponentImage
-          imageURL="https://random.imagecdn.app/500/200"
-          title="Primer Titulo"
-          secondTitle="Segundo Titulo"
-        />
-        <ComponentImage
-          imageURL="https://random.imagecdn.app/400/100"
-          title="Titulo de la segunda tarjeta"
-          secondTitle="Subtitulo de la segunda tarjeta"
-        />
-        <ComponentImage
-          imageURL="https://random.imagecdn.app/400/250"
-          title="Tercer Titulo"
-          secondTitle="Subtitulo de la terca tarjeta"
-        />
-      </ScrollView> */}
       <FlatList
         data={DATA}
         keyExtractor={(item) => item.id}
         renderItem={renderImageComponent}
+        numColumns={2}
       />
     </SafeAreaView>
   );
