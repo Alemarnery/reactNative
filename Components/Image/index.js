@@ -8,25 +8,20 @@ const ComponentImage = ({ imageURL, title, secondTitle }) => {
         source={{
           uri: imageURL,
         }}
-        style={{
-          margin: 3,
-          borderColor: "blue",
-          borderWidth: 3,
-          height: 100,
-        }}
+        style={Style.image}
       />
 
-      <View style={{ flexDirection: "row" }}>
+      <View style={Style.viewCircle}>
         <View style={Style.circle} />
         <View style={Style.circle} />
         <View style={Style.circle} />
       </View>
 
-      <View style={{ borderWidth: 1, borderColor: "green", margin: 3 }}>
+      <View style={[Style.viewText, { borderColor: "green" }]}>
         <Text style={Style.text}>{title}</Text>
       </View>
 
-      <View style={{ borderWidth: 1, borderColor: "red", margin: 3 }}>
+      <View style={[Style.viewText, { borderColor: "red" }]}>
         <Text style={Style.text}>{secondTitle} </Text>
       </View>
     </View>
@@ -34,16 +29,31 @@ const ComponentImage = ({ imageURL, title, secondTitle }) => {
 };
 
 const Style = StyleSheet.create({
-  text: {
-    fontSize: 20,
-    textAlign: "center",
-  },
   ContainerView: {
     borderColor: "purple",
     borderWidth: 5,
     margin: 5,
     padding: 5,
     flex: 1,
+  },
+  image: {
+    margin: 3,
+    borderColor: "blue",
+    borderWidth: 3,
+    height: 100,
+    resizeMode: "cover",
+  },
+  viewText: {
+    borderWidth: 1,
+    margin: 3,
+  },
+
+  text: {
+    fontSize: 20,
+    textAlign: "center",
+  },
+  viewCircle: {
+    flexDirection: "row",
   },
   circle: {
     width: 30,
