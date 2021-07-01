@@ -1,0 +1,34 @@
+{
+    "data": [
+        {
+            "id": 1,
+           "imageURL": "https://random.imagecdn.app/500/200",
+           "title": "Primer Titulo",
+            "secondTitle": "Segundo Titulo"
+          },
+          {
+            "id": 2,
+           "imageURL": "https://random.imagecdn.app/500/100",
+           "title": "Titulo de la segunda tarjeta",
+            "secondTitle": "Subtitulo de la segunda tarjeta"
+          },
+          {
+            "id": 3,
+           "imageURL": "https://random.imagecdn.app/400/250",
+           "title": "Tercer Titulo",
+            "secondTitle": "Subtitulo de la terca tarjeta"
+          },
+          {
+            "id": 4,
+            "mageURL": "https://random.imagecdn.app/400/250",
+            "title": "Tercer Titulo",
+            "secondTitle": "Subtitulo de la terca tarjeta"
+          },
+          {
+            "id": 5,
+            "imageURL": "https://random.imagecdn.app/400/250",
+            "title": "Tercer Titulo",
+            "secondTitle": "Subtitulo de la terca tarjeta"
+          }
+    ]
+}
