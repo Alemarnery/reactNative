@@ -1,19 +1,27 @@
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { ScrollView, StyleSheet, FlatList } from "react-native";
-//import Input from "./Components/Input";
-import ComponentImage from "./Components/Image";
 import First from "./Exercise/First";
+import Input from "./Components/Input";
+import ComponentImage from "./Components/Image";
+
+/**
+ *
+ */
 
 const layout = () => {
-  //***Square exercise
+  /**
+   * Square Exercise
+   */
   // return (
   //   <SafeAreaView style={Style.SafeAreaViewStyles}>
   //     <First />
   //   </SafeAreaView>
   // );
 
-  //*******Tile Component
+  /**
+   * Tile Component
+   */
   const DATA = [
     {
       id: 1,
@@ -29,6 +37,18 @@ const layout = () => {
     },
     {
       id: 3,
+      imageURL: "https://random.imagecdn.app/400/250",
+      title: "Tercer Titulo",
+      secondTitle: "Subtitulo de la terca tarjeta",
+    },
+    {
+      id: 4,
+      imageURL: "https://random.imagecdn.app/400/250",
+      title: "Tercer Titulo",
+      secondTitle: "Subtitulo de la terca tarjeta",
+    },
+    {
+      id: 5,
       imageURL: "https://random.imagecdn.app/400/250",
       title: "Tercer Titulo",
       secondTitle: "Subtitulo de la terca tarjeta",

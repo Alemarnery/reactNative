@@ -36,12 +36,14 @@ const ComponentImage = ({ imageURL, title, secondTitle }) => {
 const Style = StyleSheet.create({
   text: {
     fontSize: 20,
+    textAlign: "center",
   },
   ContainerView: {
     borderColor: "purple",
     borderWidth: 5,
     margin: 5,
     padding: 5,
+    flex: 1,
   },
   circle: {
     width: 30,
