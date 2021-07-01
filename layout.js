@@ -16,6 +16,24 @@ const layout = () => {
   // );
 
   /**
+   * Input Component
+   */
+  return (
+    <SafeAreaView style={Style.SafeAreaViewStyles}>
+      <Input
+        placeholder="Enter your name"
+        iconName="drive-file-rename-outline"
+        iconLib="MaterialIcons"
+      />
+      <Input
+        placeholder="Enter your lastNname"
+        iconName="brush"
+        iconLib="Ionicons"
+      />
+    </SafeAreaView>
+  );
+
+  /**
    * Tile Component
    */
   return (
